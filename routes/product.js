@@ -6,7 +6,6 @@ const {
     productById,
     read,
     remove,
-    update
 } = require("../controllers/product");
 const {
     requireSignin,
@@ -33,7 +32,7 @@ router.put(
     isAdmin,
     update
 );
-
+  
 router.param("userId", userById);
 router.param("productId", productById);
 
