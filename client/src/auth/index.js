@@ -19,13 +19,13 @@ export const signup = user => {
 
 export const signin = user => {
     return fetch(`${API}/signin`, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(user)
-        })
+        method: "POST",
+        headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    })
         .then(response => {
             return response.json();
         })
@@ -46,8 +46,8 @@ export const signout = next => {
         localStorage.removeItem("jwt");
         next();
         return fetch(`${API}/signout`, {
-                method: "GET"
-            })
+            method: "GET"
+        })
             .then(response => {
                 console.log("signout", response);
             })
