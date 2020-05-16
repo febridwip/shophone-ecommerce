@@ -1,7 +1,5 @@
 const Category = require("../models/category");
-const {
-    errorHandler
-} = require("../helpers/dbErrorHandler");
+const { errorHandler } = require("../helpers/dbErrorHandler");
 
 exports.categoryById = (req, res, next, id) => {
     Category.findById(id).exec((err, category) => {
@@ -23,9 +21,7 @@ exports.create = (req, res) => {
                 error: errorHandler(err)
             });
         }
-        res.json({
-            data
-        });
+        res.json({ data });
     });
 };
 
