@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Redirect } from "react-router-dom";
 import Layout from "../core/Layout";
 import { signin, authenticate, isAuthenticated } from "../auth";
 
 const Signin = () => {
     const [values, setValues] = useState({
-        email: "ryan@gmail.com",
-        password: "rrrrrr9",
+        email: "",
+        password: "",
         error: "",
         loading: false,
         redirectToReferrer: false
@@ -95,7 +95,7 @@ const Signin = () => {
     return (
         <Layout
             title="Signin"
-            description="Signin to Node React E-commerce App"
+            description="Signin to Shophone E-commerce"
             className="container col-md-8 offset-md-2"
         >
             {showLoading()}
